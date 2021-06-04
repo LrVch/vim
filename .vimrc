@@ -30,6 +30,7 @@ filetype plugin indent on
 set clipboard=unnamed  
 set updatetime=50
 set shortmess+=c
+set foldmethod=manual
 
 call plug#begin('~/.vim/plugged')
 
@@ -93,6 +94,16 @@ let g:NERDTreeDirArrowExpandable = '-'
 let g:NERDTreeDirArrowCollapsible = '+'
 let g:NERDTreeIgnore = ['^node_modules$']
 let g:NERDTreeLimitedSyntax = 1
+
+" let g:gitgutter_set_sign_backgrounds = 1
+let g:gitgutter_preview_win_floating = 1
+
+let g:gitgutter_sign_added = 'a'
+let g:gitgutter_sign_modified = 'm'
+let g:gitgutter_sign_removed = 'r'
+let g:gitgutter_sign_removed_first_line = '^^'
+let g:gitgutter_sign_removed_above_and_below = 'r^'
+let g:gitgutter_sign_modified_removed = 'mr'
 
 nnoremap <C-W>O :call MaximizeToggle()<CR>
 nnoremap <C-W>o :call MaximizeToggle()<CR>
