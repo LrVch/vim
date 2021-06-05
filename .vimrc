@@ -68,8 +68,14 @@ colorscheme onedark
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
-  \ }
+  \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'relativepath', 'gitbranch', 'modified' ] ],
+  \ },
+  \ 'inactive': {
+  \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'relativepath', 'gitbranch', 'modified' ] ],
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'FugitiveHead'
+  \ },
   \ }
 
 function! LightlineFilename()
